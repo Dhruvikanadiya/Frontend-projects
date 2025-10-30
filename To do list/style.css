@@ -1,0 +1,167 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --primary: #22c55e;
+    --secondary: #ef4444;
+    --surface: #ffffff;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --border: #e5e7eb;
+    --border-hover: #d1d5db;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+.app-container {
+    max-width: 800px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.app-header {
+    text-align: center;
+    padding: 2rem 0;
+    color: white;
+}
+
+.app-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.main-content {
+    flex: 1;
+    background: var(--surface);
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#taskInput {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--border);
+    border-radius: 0.5rem;
+    outline: none;
+}
+
+#taskInput:focus {
+    border-color: var(--primary);
+}
+
+.btn {
+    padding: 1rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: white;
+}
+
+.btn-primary {
+    background: var(--primary);
+}
+
+.btn-primary:hover {
+    background: #16a34a;
+}
+
+.btn-secondary {
+    background: var(--secondary);
+}
+
+.btn-secondary:hover {
+    background: #dc2626;
+}
+
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.task-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task-item:hover {
+    border-color: var(--border-hover);
+}
+
+.task-item.completed {
+    background: #f0fdf4;
+    border-color: var(--primary);
+}
+
+.task-item.completed .task-title {
+    color: var(--text-light);
+}
+
+.task-checkbox {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-title {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.task-date {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.delete-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.delete-btn:hover {
+    background: var(--secondary);
+    border-color: var(--secondary);
+    color: white;
+    opacity: 1;
+}
+
+.empty-message {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-light);
+    font-style: italic;
+    background: #f8fafc;
+    border: 2px dashed var(--border);
+    border-radius: 0.5rem;
+}

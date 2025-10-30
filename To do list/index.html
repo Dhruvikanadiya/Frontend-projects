@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>My Tasks</h1>
+        </header>
+        
+        <main class="main-content">
+            <section class="task-input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="taskInput" 
+                        placeholder="What needs to be done?"
+                        aria-label="New task"
+                        autocomplete="off"
+                    >
+                    <button id="addTaskBtn" class="btn btn-primary" aria-label="Add new task">
+                        Add
+                    </button>
+                    <button id="deleteTaskBtn" class="btn btn-secondary" aria-label="Delete completed tasks">
+                        Clear Completed
+                    </button>
+                </div>
+            </section>
+            
+            <section class="task-list-section">
+                <ul id="taskList" class="task-list" role="list"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
